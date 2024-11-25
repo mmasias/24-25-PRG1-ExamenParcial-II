@@ -22,9 +22,21 @@ Proponga un código limpio y sencillo que resuelva la integral entre los puntos 
 
 ## Pregunta 3 - 4 puntos
 
+Los niños J.A., J.E. y J.I. suelen jugar al escondite. En el patio hay seis sitios para esconderse: un árbol, un banco, un arbusto, un columpio, una caseta y un tobogán. Los niños se esconden en ubicaciones aleatorias y el usuario debe encontrarlos, teniendo un máximo de diez intentos.
 
+```
+¡Los niños se han escondido!
+¿Dónde quieres buscar? 1
+Has mirado en el árbol... ¡Has encontrado a J.A.!
+Llevas 1 intento y has encontrado 1 niño.
+
+¿Dónde quieres buscar? 2
+Has mirado en el banco... ¡No hay nadie!
+Llevas 2 intentos y has encontrado 1 niño.
+
+¿Dónde quieres buscar? 5
+Has mirado en la caseta... ¡Has encontrado a J.I.!
+Llevas 3 intentos y has encontrado 2 niños.
+```
 
 ## Pregunta 4 - 4 puntos
-
-
-

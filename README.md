@@ -46,11 +46,11 @@ Ejercicios trabajados:
 
 ## Parte 2
 
-En esta parte:
-
-- **No se admite** código que no sea limpio, sencillo y elegante, acorde al estilo de desarrollo visto durante la asignatura.
-- **No debe usar** conceptos no vistos en clase.
-- Debe entregarse en la carpeta /src de su repositorio de entrega.
+|Para esta parte|Criterios de evaluación|
+|-|-|
+|No se admite código que no sea limpio, sencillo y elegante, acorde al estilo de desarrollo visto durante la asignatura.|Aplicación de los principios de vistos en clase.|
+|No debe usar conceptos no vistos en clase.|Calidad y descriptividad de los commits realizados.|
+|Debe entregarse en la carpeta /src de su repositorio de entrega.|Claridad del código resultante.|
 
 ### Pregunta 2 - *(4 puntos)*.
 
@@ -70,7 +70,15 @@ Proponga una solución que, para la fórmula indicada, resuelva la integral entr
 
 ### Pregunta 3 - *(4 puntos)*.
 
-Cuatro niños suelen jugar al escondite en el parque de las llamas, donde hay seis sitios para esconderse: un árbol, un banco, un arbusto, un columpio, una caseta y un tobogán. Tres niños se esconden en ubicaciones aleatorias y el cuarto (orientado por el usuario) debe encontrarlos, teniendo un máximo de doce intentos. Cuando el usuario busca en un sitio en el que están, los niños tienen un 10% de ocultarse de modo que el usuario no los encuentre.
+Cuatro niños suelen jugar al escondite en el parque de las llamas, donde hay seis sitios para esconderse: un árbol, un banco, un arbusto, un columpio, una caseta y un tobogán. 
+
+Tres niños se esconden en ubicaciones aleatorias y el cuarto (orientado por el usuario) debe encontrarlos, teniendo un máximo de doce intentos. 
+
+Cuando el usuario busca cerca del sitio en el que están, los niños tienen un 10% de probabilidades de ocultarse de modo que el usuario no los vea y por tanto no los encuentre.
+
+Proponga una solución que permita jugar.
+
+
 
 ```
 ¡Los niños se han escondido!
@@ -89,8 +97,6 @@ Llevas 2 intentos y has encontrado 1 niño.
 Has mirado en la caseta... ¡Has encontrado al niño 1!
 Llevas 3 intentos y has encontrado 2 niños.
 ```
-
-Proponga una solución que permita jugar.
 
 ### Pregunta 4 - *(2 puntos)*.
 

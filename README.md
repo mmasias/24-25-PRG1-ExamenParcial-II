@@ -118,11 +118,6 @@ Un montacargas está instalado en un edificio en construcción de 10 plantas. Al
 <div align=center>
 
 <table>
-<tr>
-  <td align=center>Inicio</td>
-  <td align=center>Subiendo a la planta 7</td>
-  <td align=center>Bajando a la planta 3</td>
-</tr>
 <tr><td>
   
 ```text
@@ -137,6 +132,7 @@ Un montacargas está instalado en un edificio en construcción de 10 plantas. Al
 1     |   |
 0    [ --- ]
 -----------------
+Montacargas en planta 0 - Detenido
 ```   
 </td><td>
 
@@ -152,6 +148,7 @@ Un montacargas está instalado en un edificio en construcción de 10 plantas. Al
 1     |   |
 0     |   |
 -----------------
+Montacargas en planta 4 - Subiendo a planta 7
 ```
 </td><td>
 
@@ -167,6 +164,7 @@ Un montacargas está instalado en un edificio en construcción de 10 plantas. Al
 1     |   |
 0     |   |
 -----------------
+Montacargas en planta 7 - Bajando a planta 3
 ```
 </td><tr>
 </table></div>
@@ -175,8 +173,8 @@ Un montacargas está instalado en un edificio en construcción de 10 plantas. Al
 
 Proponga una solución que extienda el problema anterior para:
 
-- Conocer la carga que sube en el ascensor con cada llamada (la carga suele ser entre los 30 y 75 kilos).
-- Saber la carga total transportada en el ascensor durante la simulación.
+- Conocer la carga que sube en el montacargas con cada llamada (la carga suele ser entre los 30 y 75 kilos).
+- Saber la carga total transportada en el montacargas durante la simulación.
 
 ```text
 9     |   |
@@ -190,5 +188,5 @@ Proponga una solución que extienda el problema anterior para:
 1     |   |
 0     |   |
 -----------------
-Ascensor transportando 45 kilos.
+Montacargas en planta 7 - Bajando a planta 3 - Transportando 45 kilos.
 ```

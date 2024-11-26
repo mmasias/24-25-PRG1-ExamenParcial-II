@@ -70,7 +70,7 @@ Proponga una solución que, para la fórmula indicada, resuelva la integral entr
 
 ### Pregunta 3 - *(4 puntos)*.
 
-Cuatro niños suelen jugar al escondite en el parque de las llamas, donde hay seis sitios para esconderse: un árbol, un banco, un arbusto, un columpio, una caseta y un tobogán. Tres niños se esconden en ubicaciones aleatorias y el cuarto (orientado por el usuario) debe encontrarlos, teniendo un máximo de diez intentos. Cuando el usuario busca en un sitio en el que están, los niños tienen un 10% de ocultarse de modo que el usuario no los encuentre.
+Cuatro niños suelen jugar al escondite en el parque de las llamas, donde hay seis sitios para esconderse: un árbol, un banco, un arbusto, un columpio, una caseta y un tobogán. Tres niños se esconden en ubicaciones aleatorias y el cuarto (orientado por el usuario) debe encontrarlos, teniendo un máximo de doce intentos. Cuando el usuario busca en un sitio en el que están, los niños tienen un 10% de ocultarse de modo que el usuario no los encuentre.
 
 ```
 ¡Los niños se han escondido!
@@ -94,9 +94,13 @@ Proponga una solución que permita jugar.
 
 ### Pregunta 4 - *(2 puntos)*.
 
-Extienda el problema anterior para:
+Proponga una solución que extienda el problema anterior para:
 
-- Impedir que dos niños puedan esconderse en el mismo sitio
+- Impedir que dos niños puedan esconderse en el mismo sitio.
 - Agregar la probabilidad -en cada turno- de que un niño se ponga nervioso y antes de cada turno par pueda hacer un ruido que delate su posición: la probabilidad es del 5%.
 
-Proponga una solución que extienda el problema anterior.
+### Pregunta 5 - *(2 puntos)*.
+
+Proponga una solución que extienda el problema anterior para:
+
+- Permitir que en el turno 7 los niños cambien (sigilosamente) su ubicación. La probabilidad de querer intercambiar es del 30%.

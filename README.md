@@ -132,7 +132,8 @@ Un montacargas está instalado en un edificio en construcción de 10 plantas. Al
 1     |   |
 0    [ --- ]
 -----------------
-Montacargas en planta 0 - Detenido
+Montacargas en planta 0
+Detenido
 ```   
 </td><td>
 
@@ -148,7 +149,8 @@ Montacargas en planta 0 - Detenido
 1     |   |
 0     |   |
 -----------------
-Montacargas en planta 4 - Subiendo a planta 7
+Montacargas en planta 4
+Subiendo a planta 7
 ```
 </td><td>
 
@@ -164,7 +166,8 @@ Montacargas en planta 4 - Subiendo a planta 7
 1     |   |
 0     |   |
 -----------------
-Montacargas en planta 7 - Bajando a planta 3
+Montacargas en planta 7
+Bajando a planta 3
 ```
 </td><tr>
 </table></div>
@@ -188,5 +191,7 @@ Proponga una solución que extienda el problema anterior para:
 1     |   |
 0     |   |
 -----------------
-Montacargas en planta 7 - Bajando a planta 3 - Transportando 45 kilos.
+Montacargas en planta 7
+Bajando a planta 3
+Transportando 45 kilos.
 ```

@@ -2,7 +2,7 @@
 
 ## Parte I
 
-### Pregunta 1 - *(8 puntos)*
+### Pregunta 1 - *(7 puntos)*
 
 Durante estas semanas ha tenido la oportunidad de practicar y estudiar con los ejercicios propuestos en clase. Esta pregunta busca evaluar el trabajo continuo y la dedicación demostrados.
 
@@ -52,7 +52,7 @@ Ejercicios trabajados:
 |No debe usar conceptos no vistos en clase.|Calidad y descriptividad de los commits realizados.|
 |Debe entregarse en la carpeta /src de su repositorio de entrega.|Claridad del código resultante.|
 
-### Pregunta 2 - *(4 puntos)*
+### Pregunta 2 - *(3 puntos)*
 
 La transformada de fourier es una herramienta matemática fundamental que permite descomponer una señal periódica en una suma de funciones sinusoidales simples. En el siguiente ejemplo se presenta una señal compuesta por tres armónicos.
 
@@ -66,7 +66,9 @@ La transformada de fourier es una herramienta matemática fundamental que permit
 
 </div>
 
-Proponga una solución que, para la fórmula indicada, resuelva la integral entre los puntos `a` y `b` (que son pedidos al usuario).
+Proponga una solución que, para la fórmula indicada, calcule la integral entre los puntos `a` y `b` (que son pedidos al usuario). 
+
+> Recuerde que una integral es el área bajo la curva, y que puede aproximar su cálculo utilizando el área de suficientes rectángulos de base muy pequeña y altura igual al valor de la función.
 
 ### Pregunta 3 - *(4 puntos)*
 

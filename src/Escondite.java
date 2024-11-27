@@ -16,9 +16,9 @@ class Escondite {
             int guess = new Scanner(System.in).nextInt();
 
             boyOne = lookAt(boyOne, guess);
+            boyTwo = lookAt(boyTwo, guess);
+            boyThree = lookAt(boyThree, guess);
 
-            boyTwo = guess == boyTwo ? 0 : boyTwo;
-            boyThree = guess == boyThree ? 0 : boyThree;
             allFound = boyOne + boyTwo + boyThree == 0;
             arePlaying = turn < 12 && !allFound;
             countHistory(turn, boyOne, boyTwo, boyThree);
@@ -26,7 +26,7 @@ class Escondite {
     }
 
     static int lookAt(int boy, int guess) {
-        return boy == guess ? 0 : boy;
+        return boy == guess && Math.random() > 0.1 ? 0 : boy;
     }
 
     static void countHistory(int turn, int boyOne, int boyTwo, int boyThree) {

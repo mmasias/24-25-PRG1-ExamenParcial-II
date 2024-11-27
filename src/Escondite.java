@@ -3,9 +3,12 @@ import java.util.Scanner;
 class Escondite {
     public static void main(String[] args) {
 
-        int boyOne = (int) (Math.random() * 6 + 1);
-        int boyTwo = (int) (Math.random() * 6 + 1);
-        int boyThree = (int) (Math.random() * 6 + 1);
+        final int PLACES = 6;
+        int boyOne = 0, boyTwo = 0, boyThree = 0;
+
+        boyOne = definePlace(PLACES, boyTwo, boyThree);
+        boyTwo = definePlace(PLACES, boyOne, boyThree);
+        boyThree = definePlace(PLACES, boyTwo, boyTwo);
         boolean arePlaying = true;
         boolean allFound = false;
         int turn = 0;
@@ -23,6 +26,14 @@ class Escondite {
             arePlaying = turn < 12 && !allFound;
             countHistory(turn, boyOne, boyTwo, boyThree);
         }
+    }
+
+    static int definePlace(int numberOfPlaces, int forbiddenPlaceOne, int forbiddenPlacetwo) {
+        int place;
+        do {
+            place = (int) (Math.random() * numberOfPlaces + 1);
+        } while (place == forbiddenPlaceOne || place == forbiddenPlacetwo);
+        return place;
     }
 
     static int lookAt(int boy, int guess) {

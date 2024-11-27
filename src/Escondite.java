@@ -16,31 +16,29 @@ class Escondite {
 
         while (arePlaying) {
             turn++;
-            nervous(boyOne, boyTwo, boyThree);
-            System.out.print("Dónde mirar? [" + boyOne + ":" + boyTwo + ":" + boyThree + "] ");
+            nervous(boyOne, boyTwo, boyThree, turn);
+            System.out.print("TURNO ["+turn+"] Dónde mirar? [" + boyOne + ":" + boyTwo + ":" + boyThree + "] ");
             int guess = new Scanner(System.in).nextInt();
 
             boyOne = lookAt(boyOne, guess);
             boyTwo = lookAt(boyTwo, guess);
             boyThree = lookAt(boyThree, guess);
-            if (turn == 7) {
-                boyOne = boyOne == 0 ? 0 : definePlace(PLACES, boyTwo, boyThree);
-                boyTwo = boyTwo == 0 ? 0 : definePlace(PLACES, boyOne, boyThree);
-                boyThree = boyThree == 0 ? 0 : definePlace(PLACES, boyOne, boyTwo);
-            }
+
             allFound = boyOne == VISIBLE && boyTwo == VISIBLE && boyThree == VISIBLE;
             arePlaying = turn < 12 && !allFound;
             countHistory(turn, boyOne, boyTwo, boyThree);
         }
     }
 
-    static void nervous(int boyOne, int boyTwo, int boyThree) {
-        final int VISIBLE = 0;
-        String sound = "Aguzando el oido...";
-        sound = sound + (boyOne != VISIBLE && Math.random() < 0.05 ? boyOne + ", " : "");
-        sound = sound + (boyTwo != VISIBLE && Math.random() < 0.05 ? boyTwo + ", " : "");
-        sound = sound + (boyThree != VISIBLE && Math.random() < 0.05 ? boyThree : "");
-        System.out.println(sound);
+    static void nervous(int boyOne, int boyTwo, int boyThree, int turn) {
+        if (turn%2==0) {
+            final int VISIBLE = 0;
+            String sound = "Aguzando el oido...";
+            sound = sound + (boyOne != VISIBLE && Math.random() < 0.7 ? boyOne + ", " : "");
+            sound = sound + (boyTwo != VISIBLE && Math.random() < 0.7 ? boyTwo + ", " : "");
+            sound = sound + (boyThree != VISIBLE && Math.random() < 0.7 ? boyThree : "");
+            System.out.println(sound);
+        }
     }
 
     static int definePlace(int numberOfPlaces, int forbiddenPlaceOne, int forbiddenPlacetwo) {

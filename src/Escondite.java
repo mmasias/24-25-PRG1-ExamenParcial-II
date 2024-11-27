@@ -12,9 +12,11 @@ class Escondite {
 
         while (arePlaying) {
             turn++;
-            System.out.print("Dónde mirar? ["+boyOne+":"+boyTwo+":"+boyThree+"] ");
+            System.out.print("Dónde mirar? [" + boyOne + ":" + boyTwo + ":" + boyThree + "] ");
             int guess = new Scanner(System.in).nextInt();
-            boyOne = guess == boyOne ? 0 : boyOne;
+
+            boyOne = lookAt(boyOne, guess);
+
             boyTwo = guess == boyTwo ? 0 : boyTwo;
             boyThree = guess == boyThree ? 0 : boyThree;
             allFound = boyOne + boyTwo + boyThree == 0;
@@ -22,10 +24,15 @@ class Escondite {
             countHistory(turn, boyOne, boyTwo, boyThree);
         }
     }
-    static void countHistory(int turn, int boyOne, int boyTwo, int boyThree){
-        System.out.println("Turno "+turn);
-        System.out.println("Niño 1 " + (boyOne==0?"encontrado":"escondido"));
-        System.out.println("Niño 2 " + (boyTwo==0?"encontrado":"escondido"));
-        System.out.println("Niño 3 " + (boyThree==0?"encontrado":"escondido"));
+
+    static int lookAt(int boy, int guess) {
+        return boy == guess ? 0 : boy;
+    }
+
+    static void countHistory(int turn, int boyOne, int boyTwo, int boyThree) {
+        System.out.println("Turno " + turn);
+        System.out.println("Niño 1 " + (boyOne == 0 ? "encontrado" : "escondido"));
+        System.out.println("Niño 2 " + (boyTwo == 0 ? "encontrado" : "escondido"));
+        System.out.println("Niño 3 " + (boyThree == 0 ? "encontrado" : "escondido"));
     }
 }

@@ -23,7 +23,11 @@ class Escondite {
             boyOne = lookAt(boyOne, guess);
             boyTwo = lookAt(boyTwo, guess);
             boyThree = lookAt(boyThree, guess);
-
+            if (turn == 7) {
+                boyOne = boyOne == 0 ? 0 : definePlace(PLACES, boyTwo, boyThree);
+                boyTwo = boyTwo == 0 ? 0 : definePlace(PLACES, boyOne, boyThree);
+                boyThree = boyThree == 0 ? 0 : definePlace(PLACES, boyOne, boyTwo);
+            }
             allFound = boyOne == VISIBLE && boyTwo == VISIBLE && boyThree == VISIBLE;
             arePlaying = turn < 12 && !allFound;
             countHistory(turn, boyOne, boyTwo, boyThree);

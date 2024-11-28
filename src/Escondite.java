@@ -16,8 +16,8 @@ class Escondite {
 
         while (gameInProgress) {
             currentTurn++;
-            updateNervousness(firstPlayerPosition, secondPlayerPosition, thirdPlayerPosition, currentTurn);
             System.out.print("TURNO ["+currentTurn+"] Dónde mirar? [" + firstPlayerPosition + ":" + secondPlayerPosition + ":" + thirdPlayerPosition + "] ");
+            updateNervousness(firstPlayerPosition, secondPlayerPosition, thirdPlayerPosition, currentTurn);            
             int playerGuess = new Scanner(System.in).nextInt();
 
             firstPlayerPosition = lookAt(firstPlayerPosition, playerGuess);

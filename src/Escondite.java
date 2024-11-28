@@ -3,34 +3,34 @@ import java.util.Scanner;
 class Escondite {
     public static void main(String[] args) {
 
-        final int PLACES = 6;
+        final int TOTAL_PLACES = 6;
         final int VISIBLE = 0;
-        int boyOne = VISIBLE, boyTwo = VISIBLE, boyThree = VISIBLE;
+        int firstPlayerPosition = VISIBLE, secondPlayerPosition = VISIBLE, thirdPlayerPosition = VISIBLE;
 
-        boyOne = definePlace(PLACES, boyTwo, boyThree);
-        boyTwo = definePlace(PLACES, boyOne, boyThree);
-        boyThree = definePlace(PLACES, boyTwo, boyTwo);
-        boolean arePlaying = true;
-        boolean allFound = false;
-        int turn = 0;
+        firstPlayerPosition = definePlace(TOTAL_PLACES, secondPlayerPosition, thirdPlayerPosition);
+        secondPlayerPosition = definePlace(TOTAL_PLACES, firstPlayerPosition, thirdPlayerPosition);
+        thirdPlayerPosition = definePlace(TOTAL_PLACES, secondPlayerPosition, secondPlayerPosition);
+        boolean gameInProgress = true;
+        boolean allPlayersFound = false;
+        int currentTurn = 0;
 
-        while (arePlaying) {
-            turn++;
-            nervous(boyOne, boyTwo, boyThree, turn);
-            System.out.print("TURNO ["+turn+"] Dónde mirar? [" + boyOne + ":" + boyTwo + ":" + boyThree + "] ");
-            int guess = new Scanner(System.in).nextInt();
+        while (gameInProgress) {
+            currentTurn++;
+            updateNervousness(firstPlayerPosition, secondPlayerPosition, thirdPlayerPosition, currentTurn);
+            System.out.print("TURNO ["+currentTurn+"] Dónde mirar? [" + firstPlayerPosition + ":" + secondPlayerPosition + ":" + thirdPlayerPosition + "] ");
+            int playerGuess = new Scanner(System.in).nextInt();
 
-            boyOne = lookAt(boyOne, guess);
-            boyTwo = lookAt(boyTwo, guess);
-            boyThree = lookAt(boyThree, guess);
+            firstPlayerPosition = lookAt(firstPlayerPosition, playerGuess);
+            secondPlayerPosition = lookAt(secondPlayerPosition, playerGuess);
+            thirdPlayerPosition = lookAt(thirdPlayerPosition, playerGuess);
 
-            allFound = boyOne == VISIBLE && boyTwo == VISIBLE && boyThree == VISIBLE;
-            arePlaying = turn < 12 && !allFound;
-            countHistory(turn, boyOne, boyTwo, boyThree);
+            allPlayersFound = firstPlayerPosition == VISIBLE && secondPlayerPosition == VISIBLE && thirdPlayerPosition == VISIBLE;
+            gameInProgress = currentTurn < 12 && !allPlayersFound;
+            tellTale(currentTurn, firstPlayerPosition, secondPlayerPosition, thirdPlayerPosition);
         }
     }
 
-    static void nervous(int boyOne, int boyTwo, int boyThree, int turn) {
+    static void updateNervousness(int boyOne, int boyTwo, int boyThree, int turn) {
         if (turn%2==0) {
             final int VISIBLE = 0;
             String sound = "Aguzando el oido...";
@@ -41,11 +41,11 @@ class Escondite {
         }
     }
 
-    static int definePlace(int numberOfPlaces, int forbiddenPlaceOne, int forbiddenPlacetwo) {
+    static int definePlace(int numberOfPlaces, int forbiddenPlaceOne, int forbiddenPlaceTwo) {
         int place;
         do {
             place = (int) (Math.random() * numberOfPlaces + 1);
-        } while (place == forbiddenPlaceOne || place == forbiddenPlacetwo);
+        } while (place == forbiddenPlaceOne || place == forbiddenPlaceTwo);
         return place;
     }
 
@@ -53,7 +53,7 @@ class Escondite {
         return boy == guess && Math.random() > 0.1 ? 0 : boy;
     }
 
-    static void countHistory(int turn, int boyOne, int boyTwo, int boyThree) {
+    static void tellTale(int turn, int boyOne, int boyTwo, int boyThree) {
         final int VISIBLE = 0;
         System.out.println("Turno " + turn);
         System.out.println("Niño 1 " + (boyOne == VISIBLE ? "ENCONTRADO!" : "escondido"));
